@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:title" content="Romm Convent Resale · Nexspace Realty">
+<meta property="og:description" content="Freehold resale condos at Romm Convent, Silom. Foreign quota available, 85 to 480 sqm.">
+<meta property="og:image" content="https://nexspace-realty.github.io/romm-convent-tour-20-05/sale-assets/hero.jpg">
+<link rel="icon" href="sale-assets/logo.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>Romm Convent Resale</title>
+<meta name="description" content="Freehold resale condos at Romm Convent, Convent Road, Silom. Foreign quota available: 85 to 480 sqm. Private viewings with Nexspace Realty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: photo-led single column. Hero image, then units as a spec list with 360° tour links, gallery, location, enquiry. Walnut + Lumpini green taken from the units themselves. */
+:root {
+  --bg: #f8f6ee;
+  --surface: #ffffff;
+  --fg: #1f2a38;
+  --muted: #5b6676;
+  --rule: #e2ddc8;
+  --walnut: #557f54;
+  --green: #3d5679;
+  --green-ink: #ffffff;
+  --wa: #3d5679;
+  --logo-bg: transparent;
+  /* Nexspace logo colours: navy #3d5679, sage #93b591, cream #f2edd5 */
+  --font: "Jost", "Avenir Next", "Avenir", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131922; --surface: #1b2330; --fg: #eceadf; --muted: #a4aebb; --rule: #2c3644;
+    --walnut: #93b591; --green: #a9bedb; --green-ink: #131922; --wa: #93b591; --logo-bg: #f8f6ee; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131922; --surface: #1b2330; --fg: #eceadf; --muted: #a4aebb; --rule: #2c3644;
+  --walnut: #93b591; --green: #a9bedb; --green-ink: #131922; --wa: #93b591; --logo-bg: #f8f6ee; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font); font-weight: 300; font-size: 17px; line-height: 1.6; letter-spacing: .01em; }
+a { color: var(--green); }
+.wrap { max-width: 68rem; margin: 0 auto; padding-inline: 16px; }
+h1, h2, h3 { font-weight: 400; letter-spacing: .02em; line-height: 1.15; margin: 0; text-wrap: balance; }
+h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+p { margin: 0; max-width: 62ch; }
+.eyebrow { font-size: 13px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--walnut); }
+section { padding-block: 56px; display: flex; flex-direction: column; gap: 24px; }
+section + section { border-top: 1px solid var(--rule); }
+
+/* top bar */
+.bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 14px; }
+.brand { font-weight: 500; letter-spacing: .08em; text-transform: uppercase; font-size: 14px; }
+.logo { display: block; height: 40px; width: auto; max-width: 62vw; object-fit: contain; background: var(--logo-bg); border-radius: 6px; padding: 4px 6px; }
+.bar a.small { font-size: 15px; font-weight: 400; text-decoration: none; }
+
+/* hero */
+.hero { position: relative; border-radius: 6px; overflow: hidden; }
+.hero img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; max-width: 100%; }
+.hero-copy { display: flex; flex-direction: column; gap: 16px; padding-block: 28px 8px; }
+.hero-copy h1 { font-size: clamp(2rem, 5.5vw, 3.4rem); font-weight: 400; }
+.hero-copy .lead { font-size: 19px; color: var(--muted); }
+.motto { font-size: 18px; font-weight: 400; color: var(--walnut); letter-spacing: .03em; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; padding: 0 22px; border-radius: 6px; font: 500 16px/1 var(--font); letter-spacing: .03em; text-decoration: none; border: 1px solid transparent; cursor: pointer; }
+.btn-wa { background: var(--wa); color: var(--green-ink); }
+.btn-line { background: transparent; color: var(--fg); border-color: var(--fg); }
+.btn:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--walnut); outline-offset: 2px; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--muted); font-size: 15px; padding: 0; margin: 4px 0 0; list-style: none; }
+.facts li::before { content: "·"; margin-right: 8px; color: var(--walnut); }
+.facts li:first-child::before { content: none; }
+
+/* units */
+.units { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0 32px; }
+.unit { display: grid; grid-template-columns: 5.5rem 1fr; gap: 4px 16px; padding-block: 18px; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.size { font-size: 30px; font-weight: 400; font-variant-numeric: tabular-nums; line-height: 1; grid-row: span 2; }
+.size small { font-size: 14px; color: var(--muted); margin-left: 2px; }
+.unit-name { font-weight: 500; min-width: 0; }
+.unit-meta { color: var(--muted); font-size: 15px; min-width: 0; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.unit-meta a { font-weight: 400; }
+.note { color: var(--muted); font-size: 14px; }
+
+/* gallery */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.gallery figure { margin: 0; min-width: 0; }
+.gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; }
+#gallery h2 { font-size: 1.3rem; }
+.exclusive { font-size: 15px; font-weight: 500; letter-spacing: .03em; color: var(--green); }
+.places { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 0 32px; }
+.place { display: flex; flex-direction: column; gap: 2px; padding-block: 14px; border-top: 1px solid var(--rule); min-width: 0; }
+.place-name { font-size: 20px; font-weight: 400; letter-spacing: .02em; }
+.place-meta { color: var(--muted); font-size: 15px; }
+.tower { display: block; width: 100%; max-width: 26rem; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 4px; }
+.gallery figcaption { font-size: 13px; color: var(--muted); padding-top: 4px; }
+@media (max-width: 520px) { .gallery { grid-template-columns: 1fr; gap: 14px; } }
+
+/* freehold + location */
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 32px; }
+.two > div { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.list { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 6px; }
+.list li::marker { color: var(--walnut); }
+
+/* enquiry */
+.enquiry { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 32px; align-items: start; }
+.enquiry > div { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+form { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 500; letter-spacing: .03em; }
+input, select, textarea { font: 300 16px/1.4 var(--font); color: var(--fg); background: var(--bg); border: 1px solid var(--rule); border-radius: 6px; padding: 12px; width: 100%; }
+textarea { min-height: 84px; resize: vertical; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 480px) { .row { grid-template-columns: 1fr; } }
+.consent { flex-direction: row; align-items: flex-start; gap: 10px; font-weight: 300; font-size: 14px; letter-spacing: 0; }
+.consent input { width: auto; margin-top: 3px; }
+.result { border-top: 1px solid var(--rule); padding-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+.contact-line { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 18px; font-weight: 400; font-variant-numeric: tabular-nums; }
+.copy { font: 400 14px/1 var(--font); padding: 8px 12px; border-radius: 6px; border: 1px solid var(--rule); background: var(--surface); color: var(--fg); cursor: pointer; }
+
+footer { padding-block: 32px 48px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px; display: flex; flex-direction: column; gap: 8px; }
+
+/* sticky mobile WhatsApp */
+.sticky { display: none; }
+@media (max-width: 640px) {
+  .sticky { display: flex; position: fixed; left: 0; right: 0; bottom: 0; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--surface); border-top: 1px solid var(--rule); gap: 10px; z-index: 5; }
+  .sticky .btn { flex: 1; min-height: 46px; padding: 0 12px; }
+  footer { padding-bottom: 110px; }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="bar">
+    <img class="logo" src="sale-assets/logo.png" alt="Nexspace Realty Co., Ltd." width="850" height="162">
+    <a class="small" href="#enquire">Book a viewing</a>
+  </header>
+
+  <div class="hero">
+    <img src="sale-assets/hero.jpg" alt="Romm Convent sky pool with sun loungers overlooking the Silom skyline" width="2000" height="1335">
+  </div>
+
+  <section class="hero-copy" style="border-top:0;padding-top:28px">
+    <span class="eyebrow">Romm Convent · Convent Road, Silom</span>
+    <h1>Freehold resale residences, foreign quota available now</h1>
+    <p class="motto">Freehold is freedom. Resale is liquidity.</p>
+    <p class="exclusive">Nexspace Realty is the exclusive agent for resale and rental at Romm Convent.</p>
+    <p class="lead">Completed units from 85 to 180 sqm, plus a 480 sqm bare shell penthouse, between Silom and Lumpini Park. Title in your own name, ready to view this week.</p>
+    <div class="ctas">
+      <a class="btn btn-wa" href="https://wa.me/66980141559?text=Hi%2C%20I%27d%20like%20to%20view%20Romm%20Convent.%20Please%20send%20me%20floor%20plans%20and%20prices." target="_blank" rel="noopener">WhatsApp us</a>
+      <a class="btn btn-line" href="#enquire">Request floor plans</a>
+    </div>
+    <ul class="facts">
+      <li>Freehold title</li><li>Foreign quota</li><li>Completed building</li><li>Near BTS Sala Daeng &amp; MRT Silom</li>
+    </ul>
+  </section>
+
+  <section id="units">
+    <span class="eyebrow">Available sizes</span>
+    <h2>Six layouts, one address</h2>
+    <div class="units">
+      <div class="unit"><span class="size">85<small>sqm</small></span><span class="unit-name">Two bedrooms</span>
+        <span class="unit-meta">Type C1 · 2BR 2BA <a href="https://nexspace-realty.github.io/romm-convent-tour-21-01/" target="_blank" rel="noopener">360° tour</a></span></div>
+      <div class="unit"><span class="size">96<small>sqm</small></span><span class="unit-name">Two bedrooms, city view</span>
+        <span class="unit-meta">Types C5 / C6 <a href="./" target="_blank" rel="noopener">360° tour C5</a><a href="https://nexspace-realty.github.io/romm-convent-tour-19-02/" target="_blank" rel="noopener">360° tour C6</a></span></div>
+      <div class="unit"><span class="size">118<small>sqm</small></span><span class="unit-name">Two bedrooms plus study</span>
+        <span class="unit-meta">Type C11 <a href="https://nexspace-realty.github.io/romm-convent-tour-504/" target="_blank" rel="noopener">360° tour</a></span></div>
+      <div class="unit"><span class="size">128<small>sqm</small></span><span class="unit-name">Large two bedrooms</span>
+        <span class="unit-meta">Type C12 <a href="https://nexspace-realty.github.io/romm-convent-tour-805/" target="_blank" rel="noopener">360° tour</a></span></div>
+      <div class="unit"><span class="size">180<small>sqm</small></span><span class="unit-name">Family residence</span>
+        <span class="unit-meta">Floor plan on request</span></div>
+      <div class="unit"><span class="size">480<small>sqm</small></span><span class="unit-name">Bare shell penthouse</span>
+        <span class="unit-meta">Design it to your own brief</span></div>
+    </div>
+    <p class="note">360° tours show Romm Convent units of the same type listed with Nexspace Realty; finishes and furniture vary by unit. Prices and current availability are sent on request.</p>
+  </section>
+
+  <section id="gallery">
+    <span class="eyebrow">Inside Romm Convent</span>
+    <h2>Residences</h2>
+    <div class="gallery">
+      <figure><img src="sale-assets/living.jpg" alt="Living room open to the kitchen and dining area, with walnut panelling and marble counters" loading="lazy"><figcaption>Living, dining and kitchen</figcaption></figure>
+      <figure><img src="sale-assets/bedroom.jpg" alt="Master bedroom with floor-to-ceiling window and city view" loading="lazy"><figcaption>Master bedroom</figcaption></figure>
+      <figure><img src="sale-assets/bath.jpg" alt="Bathroom with marble vanity and freestanding bathtub" loading="lazy"><figcaption>Master bathroom</figcaption></figure>
+    </div>
+    <h2>Shared spaces</h2>
+    <div class="gallery">
+      <figure><img src="sale-assets/lobby.jpg" alt="Double-height lobby lounge opening onto a garden" loading="lazy"><figcaption>Lobby and garden</figcaption></figure>
+      <figure><img src="sale-assets/lounge.jpg" alt="Residents' lounge with walnut walls and an indoor tree" loading="lazy"><figcaption>Residents' lounge</figcaption></figure>
+      <figure><img src="sale-assets/gym.jpg" alt="Fitness centre with treadmills facing the skyline" loading="lazy"><figcaption>Fitness centre</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="freehold">
+    <div class="two">
+      <div>
+        <span class="eyebrow">Buying freehold as a foreigner</span>
+        <h2>The title is in your name</h2>
+        <ul class="list">
+          <li>Foreigners can own up to 49% of a condominium's floor area freehold. These units sit within that foreign quota.</li>
+          <li>No nominee, no lease term: the title deed is registered to you at the Land Office.</li>
+          <li>Funds arrive from abroad with a Foreign Exchange Transaction (FET) form, which we help you arrange.</li>
+          <li>A completed resale unit means no off-plan wait, and a freehold title you can sell again later.</li>
+        </ul>
+      </div>
+      <div>
+        <span class="eyebrow">Location</span>
+        <h2>Convent Road, Silom</h2>
+        <p>A quiet, established street between Silom and Sathorn, within walking distance of Lumpini Park, BTS Sala Daeng and MRT Silom. Hospitals, international schools and the Silom business district are close by.</p>
+        <img class="tower" src="sale-assets/exterior.jpg" alt="Romm Convent tower at dusk on Convent Road, with the Silom skyline behind" loading="lazy" width="1100" height="1467">
+      </div>
+    </div>
+  </section>
+
+  <section id="developer">
+    <span class="eyebrow">The developer</span>
+    <h2>Built by PROUD Real Estate</h2>
+    <p>Romm Convent is developed by PROUD Real Estate PLC, a Thai developer founded in 1989 and listed on the Market for Alternative Investment (mai) of the Stock Exchange of Thailand since 2004. PROUD builds wellness-focused luxury residences in Bangkok, Hua Hin and Phuket. Romm Convent was created in partnership with BNH Hospital, its neighbour on Convent Road.</p>
+    <div class="places">
+      <div class="place"><span class="place-name">Romm Convent, Bangkok</span><span class="place-meta">Completed · Best Wellness Residence Development, PropertyGuru Thailand Property Awards 2024</span></div>
+      <div class="place"><span class="place-name">InterContinental Residences Hua Hin</span><span class="place-meta">Completed · Best Luxury Condominium (Hua Hin), 2020 · Fitwel certified</span></div>
+      <div class="place"><span class="place-name">The Residences at InterContinental Phuket Resort</span><span class="place-meta">Kamala Beach · Now in pre-sales, launched October 2025</span></div>
+    </div>
+  </section>
+
+  <section id="enquire">
+    <div class="enquiry">
+      <div>
+        <span class="eyebrow">Private viewings</span>
+        <h2>Ask for floor plans and prices</h2>
+        <p>Tell us which size you're interested in and when you're free. We reply within 24 hours with floor plans, prices and viewing times. Viewings run 9:30–11:30am and 1:30–4:30pm.</p>
+        <div class="contact-line"><span id="phone">+66 98 014 1559</span><button class="copy" type="button" id="copyPhone">Copy number</button></div>
+        <p class="note">WhatsApp, LINE (@nexspace) or phone.</p>
+      </div>
+      <form id="form" novalidate>
+        <div class="row">
+          <label for="f-name">Name<input id="f-name" name="name" autocomplete="name" required></label>
+          <label for="f-country">Country<input id="f-country" name="country" autocomplete="country-name"></label>
+        </div>
+        <div class="row">
+          <label for="f-size">Unit size
+            <select id="f-size" name="size">
+              <option>85 sqm</option><option>96 sqm</option><option>118 sqm</option><option>128 sqm</option><option>180 sqm</option><option>480 sqm penthouse</option><option>Not sure yet</option>
+            </select></label>
+          <label for="f-time">Viewing time
+            <select id="f-time" name="time">
+              <option>Morning (9:30–11:30am)</option><option>Afternoon (1:30–4:30pm)</option><option>Weekend</option><option>Virtual tour only</option>
+            </select></label>
+        </div>
+        <label for="f-purpose">Buying for
+          <select id="f-purpose" name="purpose"><option>Living in Bangkok</option><option>Investment</option><option>Both</option></select></label>
+        <label for="f-msg">Message (optional)<textarea id="f-msg" name="msg" placeholder="e.g. high floor, Lumpini view, budget"></textarea></label>
+        <label class="consent" for="f-consent"><input type="checkbox" id="f-consent" required> <span>I agree Nexspace Realty may use these details to reply to my enquiry, as described in the <a href="https://claude.ai/artifact/UJY6ZtJpwWZVQWHWeJ4Wkv" target="_blank" rel="noopener">privacy policy</a>.</span></label>
+        <button class="btn btn-wa" type="submit">Continue in WhatsApp</button>
+        <p class="note" id="formNote">Your enquiry opens in WhatsApp, ready to send to us.</p>
+        <div class="result" id="result" hidden>
+          <p>Your message is ready. Tap below to open WhatsApp and press send.</p>
+          <a class="btn btn-wa" id="waLink" href="https://wa.me/66980141559" target="_blank" rel="noopener">Open WhatsApp</a>
+          <p class="note">No WhatsApp? Message us on LINE at @nexspace or call +66 98 014 1559.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="team">
+    <span class="eyebrow">Nexspace Realty</span>
+    <h2>Exclusive at Romm Convent, and in Sukhumvit</h2>
+    <p>We are the exclusive agent for resale and rental at Romm Convent. Our Sukhumvit team also looks after homes in Ekkamai:</p>
+    <div class="places">
+      <div class="place"><span class="place-name">Romm Convent</span><span class="place-meta">Convent Road, Silom · Exclusive resale and rental</span></div>
+      <div class="place"><span class="place-name">Rhythm Ekkamai Estate</span><span class="place-meta">Ekkamai, Sukhumvit</span></div>
+      <div class="place"><span class="place-name">Maru Ekkamai</span><span class="place-meta">Ekkamai, Sukhumvit · Pet-friendly condominium</span></div>
+    </div>
+    <p class="note">Ask about any of these buildings on WhatsApp or LINE (@nexspace).</p>
+  </section>
+
+  <footer>
+    <span>Nexspace Realty · Bangkok, Thailand · +66 98 014 1559 · LINE @nexspace</span>
+    <span>Your details are never published, sold or rented. <a href="https://claude.ai/artifact/UJY6ZtJpwWZVQWHWeJ4Wkv" target="_blank" rel="noopener">Privacy policy (PDPA)</a></span>
+  </footer>
+</div>
+
+<div class="sticky">
+  <a class="btn btn-wa" href="https://wa.me/66980141559?text=Hi%2C%20I%27d%20like%20to%20view%20Romm%20Convent.%20Please%20send%20me%20floor%20plans%20and%20prices." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn btn-line" href="#enquire">Floor plans</a>
+</div>
+
+<script>
+(function () {
+  var form = document.getElementById('form');
+  var result = document.getElementById('result');
+  var note = document.getElementById('formNote');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('f-name');
+    var consent = document.getElementById('f-consent');
+    if (!name.value.trim()) { note.textContent = 'Please add your name so we know who to reply to.'; name.focus(); return; }
+    if (!consent.checked) { note.textContent = 'Please tick the consent box so we can reply to you.'; consent.focus(); return; }
+    var v = function (id) { return document.getElementById(id).value.trim(); };
+    var lines = [
+      "Hi Nexspace, I'd like floor plans and prices for Romm Convent.",
+      'Name: ' + v('f-name'),
+      v('f-country') ? 'Country: ' + v('f-country') : '',
+      'Unit size: ' + v('f-size'),
+      'Viewing time: ' + v('f-time'),
+      'Buying for: ' + v('f-purpose'),
+      v('f-msg') ? 'Note: ' + v('f-msg') : ''
+    ].filter(Boolean).join('\n');
+    document.getElementById('waLink').href = 'https://wa.me/66980141559?text=' + encodeURIComponent(lines);
+    note.textContent = 'Your enquiry opens in WhatsApp, ready to send to us.';
+    result.hidden = false;
+    document.getElementById('waLink').focus();
+  });
+  var btn = document.getElementById('copyPhone');
+  btn.addEventListener('click', function () {
+    var text = '+66980141559';
+    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy number'; }, 1800); };
+    try {
+      navigator.clipboard.writeText(text).then(done, function () { selectPhone(); });
+    } catch (err) { selectPhone(); }
+  });
+  function selectPhone() {
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('phone'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+  }
+})();
+</script>
+
+</body>
+</html>
