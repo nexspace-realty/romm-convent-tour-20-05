@@ -93,6 +93,14 @@ section + section { border-top: 1px solid var(--rule); }
 .place-name { font-size: 20px; font-weight: 400; letter-spacing: .02em; }
 .place-meta { color: var(--muted); font-size: 15px; }
 .tower { display: block; width: 100%; max-width: 26rem; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 4px; }
+.tour-feature { position: relative; display: block; border-radius: 6px; overflow: hidden; text-decoration: none; color: #fff; }
+.tour-feature img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; max-height: 30rem; }
+.tour-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 18px 16px; background: linear-gradient(transparent, rgba(15,22,32,.82)); display: flex; flex-direction: column; gap: 2px; }
+.tour-title { font-size: 19px; font-weight: 500; letter-spacing: .02em; }
+.tour-meta { font-size: 14px; opacity: .9; }
+.tour-feature:focus-visible { outline: 2px solid var(--walnut); outline-offset: 3px; }
+.tour-pick { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; }
+.tour-pick label { flex: 1 1 18rem; min-width: 0; }
 .gallery figcaption { font-size: 13px; color: var(--muted); padding-top: 4px; }
 @media (max-width: 520px) { .gallery { grid-template-columns: 1fr; gap: 14px; } }
 
@@ -174,6 +182,21 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--rule); color: var
         <span class="unit-meta">Design it to your own brief</span></div>
     </div>
     <p class="note">360° tours show Romm Convent units of the same type listed with Nexspace Realty; finishes and furniture vary by unit. Prices and current availability are sent on request.</p>
+  </section>
+
+  <section id="tours">
+    <span class="eyebrow">360° virtual tours</span>
+    <h2>Walk through a unit from anywhere</h2>
+    <a class="tour-feature" href="./" target="_blank" rel="noopener">
+      <img src="sale-assets/tour-2005.jpg" alt="Living room of unit 20-05, Type C5, from the 360° tour" loading="lazy" width="1200" height="800">
+      <span class="tour-cap"><span class="tour-title">Example tour: Type C5 · 96.5 sqm · Floor 20</span><span class="tour-meta">2 bedrooms, 3 bathrooms, city view · Open the 360° tour</span></span>
+    </a>
+    <div class="tour-pick">
+      <label for="tourSelect">See other unit tours
+        <select id="tourSelect"><optgroup label="Studio and one bedroom"><option value="https://nexspace-realty.github.io/Romm-convent-tour-14-08/">Type A1 · 34.58 sqm · 1BR · Floor 14</option><option value="https://nexspace-realty.github.io/romm-convent-tour-4-03/">Type B1 · 60.21 sqm · 1BR Plus · Floor 4</option><option value="https://nexspace-realty.github.io/romm-convent-tour-11-03/">Type B1 · 60.21 sqm · 1BR Plus · Floor 11</option></optgroup><optgroup label="Two bedrooms"><option value="https://nexspace-realty.github.io/romm-convent-tour-21-01/">Type C1 · 84.81 sqm · 2BR 2BA · Floor 21</option><option value="https://nexspace-realty.github.io/romm-convent-tour-801/">Type C1 · 84.81 sqm · 2BR 2BA · Floor 8 · For rent</option><option value="./">Type C5 · 96.5 sqm · 2BR 3BA · Floor 20</option><option value="https://nexspace-realty.github.io/romm-convent-tour-19-02/">Type C6 · 96.95 sqm · 2BR 2BA · Floor 19</option><option value="https://nexspace-realty.github.io/Romm-Convent-tour-16-02/">Type C6 · 96.95 sqm · 2BR 2BA · Floor 16</option><option value="https://nexspace-realty.github.io/romm-convent-tour-504/">Type C11 · 117 sqm · 2BR Plus 2BA · Floor 5</option><option value="https://nexspace-realty.github.io/romm-convent-tour-805/">Type C12 · 128 sqm · 2BR 2BA · Floor 8</option><option value="https://nexspace-realty.github.io/Romm-convent-tour-04-05/">Type C12 · 128 sqm · 2BR 3BA · Floor 4</option></optgroup></select></label>
+      <a class="btn btn-line" id="tourGo" href="./" target="_blank" rel="noopener">Open tour</a>
+    </div>
+    <p class="note">Tours show Romm Convent units listed with Nexspace Realty. Ask us which units are available now.</p>
   </section>
 
   <section id="gallery">
@@ -312,6 +335,9 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--rule); color: var
     result.hidden = false;
     document.getElementById('waLink').focus();
   });
+
+  var ts = document.getElementById('tourSelect'), tg = document.getElementById('tourGo');
+  if (ts && tg) { ts.value = './'; ts.addEventListener('change', function () { tg.href = ts.value; }); }
   var btn = document.getElementById('copyPhone');
   btn.addEventListener('click', function () {
     var text = '+66980141559';
