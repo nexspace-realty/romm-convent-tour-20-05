@@ -101,6 +101,7 @@ section + section { border-top: 1px solid var(--rule); }
 .tour-feature:focus-visible { outline: 2px solid var(--walnut); outline-offset: 3px; }
 .tour-pick { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; }
 .tour-pick label { flex: 1 1 18rem; min-width: 0; }
+.meet { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; padding-top: 14px; border-top: 1px solid var(--rule); }
 .gallery figcaption { font-size: 13px; color: var(--muted); padding-top: 4px; }
 @media (max-width: 520px) { .gallery { grid-template-columns: 1fr; gap: 14px; } }
 
@@ -230,7 +231,7 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--rule); color: var
       <div>
         <span class="eyebrow">Location</span>
         <h2>Convent Road, Silom</h2>
-        <p>A quiet, established street between Silom and Sathorn, within walking distance of Lumpini Park, BTS Sala Daeng and MRT Silom. Hospitals, international schools and the Silom business district are close by.</p>
+        <p>A quiet, established street between Silom and Sathorn, within walking distance of Lumpini Park, BTS Sala Daeng and MRT Silom. <a href="https://maps.app.goo.gl/vXvP1R7jCpyw8nnm9" target="_blank" rel="noopener">See it on Google Maps</a>. Hospitals, international schools and the Silom business district are close by.</p>
         <img class="tower" src="sale-assets/exterior.jpg" alt="Romm Convent tower at dusk on Convent Road, with the Silom skyline behind" loading="lazy" width="1100" height="1467">
       </div>
     </div>
@@ -255,6 +256,11 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--rule); color: var
         <p>Tell us which size you're interested in and when you're free. We reply within 24 hours with floor plans, prices and viewing times. Viewings run 9:30–11:30am and 1:30–4:30pm.</p>
         <div class="contact-line"><span id="phone">+66 98 014 1559</span><button class="copy" type="button" id="copyPhone">Copy number</button></div>
         <p class="note">WhatsApp, LINE (@nexspace) or phone.</p>
+        <div class="meet">
+          <span class="place-name">Where we meet</span>
+          <p>The Romm Convent lobby, Convent Road, Silom. Walk-in clients are welcome, and private viewings are by appointment.</p>
+          <a class="btn btn-line" href="https://maps.app.goo.gl/vXvP1R7jCpyw8nnm9" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
       </div>
       <form id="form" novalidate>
         <div class="row">
